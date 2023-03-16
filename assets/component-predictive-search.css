@@ -53,6 +53,7 @@
   .predictive-search {
     border-top: none;
     width: calc(100% + 0.2rem);
+    max-width: 75.2rem;
   }
 
   .header predictive-search {
