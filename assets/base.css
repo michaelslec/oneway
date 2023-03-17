@@ -2303,6 +2303,13 @@ product-info .loading-overlay:not(.hidden) ~ *,
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
+@media screen and (max-width: 749px) {
+  .no-border-bottom-on-small {
+    border-bottom: none;
+  }
+}
+
+
 .header {
   display: grid;
   grid-template-areas: 'left-icons heading icons';
