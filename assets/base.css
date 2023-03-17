@@ -2843,7 +2843,7 @@ details-disclosure > details {
 
 .header__inline-menu {
   display: block;
-  background-color: rgb(var(--color-background)) !important;
+  background-color: rgb(var(--color-background));
 }
 
 @media screen and (min-width: 750px) {
