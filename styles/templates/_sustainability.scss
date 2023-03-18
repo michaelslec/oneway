@@ -1,0 +1,302 @@
+@use "sass:map";
+
+.sustainability-hero {
+    background-color: color("sea");
+    background-image: url('sustainability_banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    @include breakpoint(md, down) {
+        background-image: url('sustainability_banner_mobile.jpg');
+    }
+
+    .sustainability-hero-inner {
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+
+        @include breakpoint(md, down) {
+            min-height: 80vh;
+            align-items: flex-end;
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-family: $fontFamilyPrimary;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.25;
+            text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+            max-width: 500px;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+
+            @include breakpoint(lg) {
+                padding: 4rem 2rem 0 2rem;
+            }
+
+            span {
+                // font-weight: $fontWeightBold;
+                display: block;
+            }
+        }
+    }
+
+
+}
+
+.sustainability-post-hero {
+    background-color: color("sea");
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-family: $fontFamilyPrimary;
+
+    -webkit-font-smoothing: antialiased;
+    padding: 1rem 0;
+    margin-bottom: 4rem;
+
+    span {
+        padding: 1rem 0;
+    }
+
+    .btn {
+        height: 3rem;
+        border-radius: 1.5rem;
+        font-size: 1.75rem;
+        font-family: $fontFamilyPrimary;
+        text-transform: uppercase;
+    }
+}
+
+.sustainability-details {
+    color: color("sea");
+
+    .product-col {
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: $fontFamilyPrimary;
+            font-weight: $fontWeightBold;
+            -webkit-font-smoothing: antialiased;
+            color: color("sea");
+            // text-transform: uppercase;
+        }
+
+        // div {
+        //     font-size: 1.5rem;
+        // }
+
+        a {
+            color: color("gray6");
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            text-transform: uppercase;
+
+            &>.icon-right {
+                display: inline-block;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: color("sea");
+
+                &>.icon-right {
+                    background-color: color("sea") !important;
+                }
+            }
+        }
+    }
+
+
+
+    .story-reverse-1,
+    .story-reverse-2 {
+        text-align: left !important;
+    }
+}
+
+.sustainability-recycle {
+    border-top: 5rem solid color("sea");
+
+    .hero-half {
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .hero-half:nth-of-type(1) {
+        background-color: color("sea");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('sustainability-half.jpg');
+        min-height: calc(100vh - 8rem);
+    }
+
+    .hero-half:nth-of-type(2) {}
+
+    .hero-half-inner {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        font-weight: $fontWeightNormal;
+
+        @include breakpoint(md) {
+            padding: 2rem 1.5rem;
+        }
+
+        @include breakpoint(lg) {
+            padding: 3rem;
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-family: $fontFamilyPrimary;
+        font-weight: $fontWeightBold;
+        -webkit-font-smoothing: antialiased;
+        color: color("sea");
+        margin-bottom: 1rem;
+        line-height: 1.25;
+    }
+
+    .recycle-desc {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: color("sea");
+    }
+
+    .recycle-icon {
+        flex: 0 0 33%;
+        text-align: center;
+        font-size: 1rem;
+        padding: 0.5rem;
+
+        img {
+            width: 8rem;
+            max-width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto 0.75rem auto;
+        }
+    }
+
+    .btn {
+        height: 3rem;
+        border-radius: 1.5rem;
+        font-size: 1.75rem;
+        font-family: $fontFamilyPrimary;
+        text-transform: uppercase;
+    }
+}
+
+.post-recycle-banner {
+    padding: 2rem 0;
+    font-family: $fontFamilyPrimary;
+    font-weight: $fontWeightBold;
+    -webkit-font-smoothing: antialiased;
+}
+
+#modal_recycle_modal {
+    .modal-window {
+        max-width: 1120px !important;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-family: $fontFamilyPrimary;
+        font-weight: $fontWeightBold;
+        -webkit-font-smoothing: antialiased;
+        color: color("sea");
+        margin-bottom: 1rem;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+    }
+
+    .price,
+    .how-it-works {
+        font-size: 1.25rem;
+        font-family: $fontFamilyPrimary;
+        font-weight: $fontWeightBold;
+        -webkit-font-smoothing: antialiased;
+        color: color("gray5");
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    .recycle-step {
+        flex: 0 0 33%;
+        font-size: 0.75rem;
+        padding: 0.5rem;
+
+        img {
+            width: 8rem;
+            max-width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto 0.75rem auto;
+        }
+    }
+
+    .recycle-modal-img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.recycle-icon {
+    // // width: 33.33%;
+    // max-width: 100px;
+    // max-height: 120px;
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+}
+
+.sustainability-details h2 span {
+    display: block;
+}
+
+.btn-recycle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    border: 1px solid transparent;
+    border-radius: 1rem !important;
+    font-size: $fontSize24 !important;
+    font-family: $fontFamilySecondary;
+    font-weight: $fontWeightBold;
+    line-height: 1.25em;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    text-transform: unset !important;
+    margin: 0 auto;
+    letter-spacing: 0 !important;
+
+    @include breakpoint(md, down) {
+        font-size: $fontSize20 !important;
+    }
+}

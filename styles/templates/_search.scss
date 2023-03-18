@@ -1,0 +1,30 @@
+@use "sass:map";
+
+.search-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border: 1px solid color("gray3");
+    text-decoration: none;
+    color: color("gray9");
+}
+
+.search-item:hover,
+.search-item:hover *,
+.search-item:focus,
+.search-item:focus *,
+.search-item:active,
+.search-item:active * {
+    opacity: 0.9;
+}
+
+.search-preview-img {
+    width: 100%;
+    height: 280px;
+    background-color: color("sea");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

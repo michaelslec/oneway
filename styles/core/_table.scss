@@ -1,0 +1,15 @@
+table.responsive-table {
+    border-collapse: collapse;
+}
+
+table.responsive-table th {
+    background-color: color("gray1");
+    font-weight: $fontWeightSemibold;
+    font-family: $fontFamilySecondary;
+}
+
+table.responsive-table th,
+table.responsive-table td {
+    border: 1px solid color("gray3");
+    padding: 0.5rem;
+}

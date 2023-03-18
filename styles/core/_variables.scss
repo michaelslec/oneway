@@ -1,0 +1,51 @@
+@use "sass:map";
+
+$borderRadius: 3px;
+
+$breakpoints: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+    ) !default;
+
+@mixin breakpoint($breakpoint, $direction: up) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @if $direction==down {
+
+            // Prints a media query based on the value
+            @media (max-width: map-get($breakpoints, $breakpoint)) {
+                @content;
+            }
+        }
+
+        @else {
+
+            // Prints a media query based on the value
+            @media (min-width: map-get($breakpoints, $breakpoint)) {
+                @content;
+            }
+        }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@function map-collect($maps...) {
+    $collection: (
+);
+
+@each $map in $maps {
+    $collection: map-merge($collection, $map);
+}
+
+@return $collection;
+}
+
+@function color($name) {
+    @return map.get($colors, $name);
+}

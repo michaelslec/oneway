@@ -1,0 +1,47 @@
+@use "sass:map";
+
+.data-toggle-list {
+    padding: 0;
+    margin: 0;
+}
+
+[data-toggle] {
+    list-style: none;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    // font-size: $fontSize18;
+    font-weight: $fontWeightSemibold;
+    font-family: $fontFamilySecondary;
+    text-transform: capitalize;
+}
+
+[data-toggle].is-active {
+    color: color("sea");
+}
+
+[data-toggle].is-active::after {
+    content: "»";
+}
+
+[data-toggle-item] {
+    display: none;
+}
+
+[data-toggle-item].is-active {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .data-toggle-list {
+        display: none !important;
+    }
+
+    [data-toggle-item] {
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    [data-toggle-item]:last-of-type {
+        margin-bottom: 0;
+    }
+}

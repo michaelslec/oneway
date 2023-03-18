@@ -1,0 +1,18 @@
+.wave {
+    width: 100vw;
+    height: auto;
+    transform: translateY(1px);
+
+    &.wave-small {
+        max-height: 9rem;
+    }
+
+    &.wave-flip {
+        transform: rotate(180deg) translateY(1px);
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+    }
+}

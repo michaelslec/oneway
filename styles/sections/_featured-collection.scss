@@ -1,0 +1,14 @@
+.featured-collection-item {
+    border: 1px solid color("gray3");
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.featured-collection-item-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

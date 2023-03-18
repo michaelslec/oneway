@@ -1,0 +1,71 @@
+@use "sass:map";
+
+a,
+.link-normal {
+    color: color("mist");
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cta-link {
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 0 0.125rem 0.5rem 0.125rem;
+    border-bottom: 2px solid color("mist");
+    letter-spacing: 0.1em;
+
+    &:hover,
+    &:active,
+    &:focus {
+        border-bottom: 2px solid darken(color("mist"), 15%);
+    }
+}
+
+a:hover,
+a:active,
+a:focus,
+.link-normal:hover,
+.link-normal:active,
+.link-normal:focus {
+    color: darken(color("mist"), 15%);
+}
+
+a.link-inverse {
+    color: #fff;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: unset !important;
+        opacity: 0.75;
+    }
+}
+
+
+
+a.link-muted {
+    color: color("gray6");
+}
+
+a.link-muted:hover,
+a.link-muted:active,
+a.link-muted:focus {
+    color: color("sea");
+}
+
+a.link-silent,
+.link-silent {
+    color: inherit;
+}
+
+a.link-silent:hover,
+.link-silent:hover,
+a.link-muted:active,
+a.link-muted:focus {
+    text-decoration: underline;
+}
+
+// .link { // <u> replaces the tradition <a> tag.  <a> we use
+//     &:extend(.cursor-pointer);
+// }

@@ -1,0 +1,22 @@
+@use "sass:map";
+
+.snippet-hero {
+    background-color: color("sea");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.snippet-hero .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 6rem - 4rem); // 100vh - header - 4rem for spacing...
+    max-height: 25rem;
+    min-height: 20rem;
+}
+
+.snippet-hero .col>* {
+    color: color("white") !important;
+}

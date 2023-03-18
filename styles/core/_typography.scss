@@ -1,0 +1,370 @@
+// @import "color";
+
+/* Font Declaration */
+// Fonts Imported in theme.liquid for Speed purposes...
+$fontFamilyPrimary: 'Poppins', sans-serif;
+$fontFamilySecondary: 'Poppins', sans-serif;
+
+// WEIGHTS
+$fontWeightLight: 300;
+$fontWeightNormal: 300;
+$fontWeightMedium: 400;
+$fontWeightSemibold: 600;
+$fontWeightBold: 700;
+
+.font-weight-light {
+    font-weight: $fontWeightLight;
+    font-family: $fontFamilyPrimary;
+}
+
+.font-weight-medium {
+    font-weight: $fontWeightMedium;
+    font-family: $fontFamilySecondary;
+}
+
+.font-weight-semibold {
+    font-weight: $fontWeightSemibold;
+    font-family: $fontFamilySecondary;
+}
+
+.font-weight-bold {
+    font-weight: $fontWeightBold;
+    font-family: $fontFamilySecondary;
+}
+
+// SIZES - Sizes are defined using REMs for accessibility, but named using pixels (based on base of 16) for simplicity's sake
+
+$fontSize48: 3rem; // 48px
+$fontSize40: 2.5rem; // 40px
+$fontSize32: 2rem; // 32px
+$fontSize24: 1.5rem; // 24px
+$fontSize20: 1.25rem; // 20px
+$fontSize18: 1.125rem; // 18px
+$fontSize16: 1rem; // 16px
+$fontSize14: 0.875rem; // 14px
+$fontSize12: 0.75rem; // 12px
+$fontSize10: 0.625rem; // 10px
+$fontSize8: 0.5rem; // 8px
+
+.font-48 {
+    font-size: $fontSize48;
+}
+
+.font-40 {
+    font-size: $fontSize40;
+}
+
+.font-32,
+h1 {
+    font-size: $fontSize32;
+}
+
+.font-24,
+h2 {
+    font-size: $fontSize24;
+}
+
+.font-20 {
+    font-size: $fontSize20;
+}
+
+.font-18 {
+    font-size: $fontSize18;
+}
+
+.font-16 {
+    font-size: $fontSize16;
+}
+
+.font-14 {
+    font-size: $fontSize14;
+}
+
+.font-12 {
+    font-size: $fontSize12;
+}
+
+.font-10 {
+    font-size: $fontSize10;
+}
+
+.font-8 {
+    font-size: $fontSize8;
+}
+
+@include breakpoint(sm, down) {
+    .font-sm-32 {
+        font-size: $fontSize32;
+    }
+
+    .font-sm-24 {
+        font-size: $fontSize24;
+    }
+
+    .font-sm-20 {
+        font-size: $fontSize20;
+    }
+
+    .font-sm-18 {
+        font-size: $fontSize18;
+    }
+
+    .font-sm-16 {
+        font-size: $fontSize16;
+    }
+
+    .font-sm-14 {
+        font-size: $fontSize14;
+    }
+
+    .font-sm-12 {
+        font-size: $fontSize12;
+    }
+
+    .font-sm-10 {
+        font-size: $fontSize10;
+    }
+
+    .font-sm-8 {
+        font-size: $fontSize8;
+    }
+}
+
+// COLORS
+body {
+    //h1, h2, h3, h4, h5, h6, a, textarea, input, select
+    color: color("black");
+}
+
+
+/* OLD Colors */
+.color-contrast {
+    color: color("white");
+}
+
+.color-red {
+    color: color("sun") !important;
+}
+
+
+
+// STYLES
+.text-justify {
+    text-align: justify !important;
+}
+
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-lowercase {
+    text-transform: lowercase !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+.text-underline,
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.font-style-normal {
+    font-style: normal;
+}
+
+.font-style-italic {
+    font-style: italic;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.text-truncate-ellipsis {
+    text-overflow: ellipsis;
+}
+
+.text-wrap-none {
+    white-space: nowrap;
+}
+
+.text-word-wrap {
+    word-wrap: break-word;
+}
+
+.text-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.strike-through {
+    text-decoration: line-through;
+}
+
+@media (min-width: 576px) {
+    .text-sm-left {
+        text-align: left !important;
+    }
+
+    .text-sm-right {
+        text-align: right !important;
+    }
+
+    .text-sm-center {
+        text-align: center !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .text-md-left {
+        text-align: left !important;
+    }
+
+    .text-md-right {
+        text-align: right !important;
+    }
+
+    .text-md-center {
+        text-align: center !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .text-lg-left {
+        text-align: left !important;
+    }
+
+    .text-lg-right {
+        text-align: right !important;
+    }
+
+    .text-lg-center {
+        text-align: center !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .text-xl-left {
+        text-align: left !important;
+    }
+
+    .text-xl-right {
+        text-align: right !important;
+    }
+
+    .text-xl-center {
+        text-align: center !important;
+    }
+}
+
+// LINE HEIGHTS
+.line-height-100 {
+    line-height: 1;
+}
+
+.line-height-110 {
+    line-height: 1.1;
+}
+
+.line-height-125 {
+    line-height: 1.25;
+}
+
+.line-height-150 {
+    line-height: 1.5;
+}
+
+.line-height-200 {
+    line-height: 2;
+}
+
+.line-height-250 {
+    line-height: 2.5;
+}
+
+// IMPLEMENT IT ALL
+.font-face-normal,
+body,
+ol,
+ul,
+li {
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: $fontFamilyPrimary;
+    font-weight: $fontWeightLight;
+    line-height: 1.25;
+}
+
+p {
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $fontFamilyPrimary;
+    font-weight: $fontWeightLight;
+    line-height: 1.5;
+    margin-bottom: 1.5;
+}
+
+// Misc
+.subtitle {
+    font-size: $fontSize18;
+    color: color("gray6");
+    text-transform: uppercase;
+    font-weight: $fontWeightSemibold;
+}
+
+.letter-spacing-100 {
+    letter-spacing: 0.1em;
+}
+
+.letter-spacing-50 {
+    letter-spacing: 0.05em;
+}
+
+.letter-spacing-0,
+.letter-spacing-normal {
+    letter-spacing: normal;
+}
+
+.list-bullet>li {
+    list-style: inside;
+    list-style-type: disc;
+}
+
+.white-space-pre {
+    white-space: pre;
+}
+
+.white-space-pre-line {
+    white-space: pre-line;
+}
+
+.white-space-pre-wrap {
+    white-space: pre-wrap;
+}

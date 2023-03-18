@@ -1,0 +1,56 @@
+.template-index {
+
+    .res-hero-homepage {
+        min-height: 70vh;
+        background-color: color("sea");
+        background-image: url('home_page_banner_desktop.jpg');
+        background-repeat: no-repeat;
+        background-position: 25% center;
+        background-size: cover;
+
+        @include breakpoint(sm, down) {
+            background-image: url('home_page_banner_mobile.jpg');
+            background-position: center;
+            min-height: 80vh;
+        }
+
+        .hero-half {
+            color: color("white");
+            text-align: center;
+            background-color: unset;
+            padding: 1rem;
+
+            @include breakpoint(lg) {
+                max-width: 500px;
+            }
+
+            .hero-half-inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 3rem;
+                height: 100%;
+            }
+
+            @include breakpoint(sm, down) {
+                .hero-half-inner {
+                    // display: flex;
+                    // flex-direction: column;
+                    // align-items: center;
+                    justify-content: flex-end;
+                    padding-bottom: 4rem;
+                    height: 100%;
+                }
+            }
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .cta-link {
+            border-bottom: 2px solid color("white");
+        }
+    }
+}

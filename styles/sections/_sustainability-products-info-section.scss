@@ -1,0 +1,20 @@
+.sustainability-products-info-section {
+
+    .product-details-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .product-details-image {
+            max-width: 200px;
+        }
+
+        @include breakpoint(sm, down) {
+            flex-wrap: wrap;
+
+            .product-details-content {
+                flex: 1 0 100%;
+            }
+        }
+    }
+}

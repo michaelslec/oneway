@@ -1,0 +1,91 @@
+/* Base Reset */
+html,
+body {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+div,
+li {
+    position: relative;
+}
+
+/* Misc */
+input,
+input:focus,
+input:active,
+button,
+button:focus,
+button:active,
+select,
+select:focus,
+select:active,
+textarea,
+textarea:focus,
+textarea:active,
+li,
+li:focus,
+a,
+a:focus,
+a:active {
+    // no silly proprietary glow
+    outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+table,
+tr,
+td,
+button,
+td,
+th,
+span,
+div,
+body,
+canvas,
+form {
+    // no margin/padding for block elements
+    padding: 0;
+    margin: 0;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Image Stuff - if we keep the image component, we should move this */
+img {
+    border: none;
+}

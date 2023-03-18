@@ -1,0 +1,47 @@
+.our-story-hero {
+    background-color: color("mist");
+    background-image: url('our-story_banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 50vh;
+
+    @include breakpoint(md, down) {
+        background-image: url('our-story_banner_mobile.jpg');
+        align-items: flex-end;
+    }
+
+    .our-story-hero-inner {
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+        padding-top: 3rem;
+
+        @include breakpoint(md, down) {
+            min-height: 80vh;
+            align-items: flex-end;
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-family: $fontFamilyPrimary;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.25;
+            text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+            max-width: 500px;
+            margin: 0 auto;
+
+            @include breakpoint(lg) {
+                padding: 0 2rem;
+            }
+
+            span {
+                // font-weight: $fontWeightBold;
+                display: block;
+            }
+        }
+    }
+
+
+}

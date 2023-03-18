@@ -1,0 +1,17 @@
+{
+  "name": "wayb-theme2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass -w ./styles/:./dist/assets/  --style compressed",
+    "dev": "shopify theme dev --store=one-way-diesel.myshopify.com --path ./dist",
+    "push": "shopify theme push --path ./dist",
+    "pull": "shopify theme pull --only config/*.json  --path ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.50.0"
+  }
+}

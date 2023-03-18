@@ -1,0 +1,6 @@
+
+@include breakpoint(md, down) {
+    .recycle-section .row .col-md-6:last-child {
+        order: -1;
+    }
+}

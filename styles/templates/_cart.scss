@@ -1,0 +1,70 @@
+/* Basic Layout */
+.cart-item-container,
+.cart-control-container {
+    border: 1px solid color("gray3");
+}
+
+.cart-item,
+.cart-control {
+    border-bottom: 1px solid color("gray3");
+    padding: 1rem;
+    display: flex;
+}
+
+.cart-item:last-of-type,
+.cart-control:last-of-type {
+    border-bottom: none;
+}
+
+.cart-item {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Cart Item Sub-Elements */
+.cart-item-img img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+}
+
+.cart-item-details {
+    margin-right: 1rem;
+    flex: 1 1 auto;
+}
+
+.cart-item-details a {
+    font-weight: $fontWeightSemibold;
+    font-family: $fontFamilySecondary;
+    text-transform: uppercase;
+    color: color("gray9");
+    text-decoration: none;
+}
+
+.cart-item-qty>input {
+    height: 4rem;
+    width: 4rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: $fontFamilySecondary;
+    border: 1px solid color("gray3");
+    border-radius: $borderRadius;
+}
+
+.cart-item-remove a {
+    font-weight: $fontWeightNormal;
+    font-family: $fontFamilySecondary;
+    color: color("sun");
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Cart Control Sub-Elements */
+.cart-control-title {
+    display: flex;
+    font-weight: $fontWeightBold;
+    font-family: $fontFamilySecondary;
+    text-transform: uppercase;
+    background-color: color("gray2");
+    justify-content: center;
+}

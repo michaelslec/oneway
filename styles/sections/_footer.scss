@@ -1,0 +1,110 @@
+@use "sass:map";
+
+footer {
+    .footer-top {
+        background-color: color("black");
+        color: color("white");
+        min-height: 6rem;
+        padding: 2.5rem 0.5rem;
+
+        @include breakpoint(sm, down) {
+            text-align: center;
+        }
+
+        a {
+            font-size: $fontSize14;
+            color: color("white");
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            font-weight: $fontWeightMedium;
+            text-transform: uppercase;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: color("mist");
+            }
+        }
+
+        .klaviyo-form {
+            padding: 0 !important;
+
+            [data-testid="form-row"] {
+                @include breakpoint(sm, down) {
+                    justify-content: center !important;
+                }
+            }
+
+            [component] {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            button {
+                height: 1rem !important;
+                padding-bottom: 0.25rem !important;
+                border-bottom: 1px solid color("mist") !important;
+            }
+        }
+
+        .b-corp-logo {
+            width: 100%;
+            max-width: 124px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .wayb-logo {
+            width: 100%;
+            max-width: 182px;
+            height: auto;
+            margin: 0 auto 1rem auto;
+        }
+
+        .icon-row {
+            display: flex;
+            margin-top: 2rem;
+
+            @include breakpoint(sm, down) {
+                justify-content: center !important;
+            }
+
+            a {
+                padding: 0.75rem;
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: color("mist");
+        color: color("white");
+        padding: 1rem;
+
+        a,
+        span {
+            color: color("white");
+            margin-bottom: 0.75rem;
+            font-size: $fontSize14;
+            text-transform: uppercase;
+            font-weight: $fontWeightMedium;
+
+            .footer-bottom span {
+                margin: 0 0.125rem;
+            }
+        }
+
+        a {
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: color("black");
+            }
+        }
+
+    }
+}

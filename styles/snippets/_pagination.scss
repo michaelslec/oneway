@@ -1,0 +1,36 @@
+@use "sass:map";
+
+.pagination {
+    margin-bottom: 2rem;
+}
+
+.pagination span {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.pagination span:last-of-type {
+    margin-right: 0;
+}
+
+.pagination a,
+.pagination .current {
+    display: inline-block;
+    padding: 1rem;
+    border: 1px solid color("gray3");
+    color: color("gray9");
+    text-decoration: none;
+}
+
+.pagination a:hover,
+.pagination a:active,
+.pagination a:focus {
+    border-color: color("sea");
+    color: color("sea");
+}
+
+.pagination .current {
+    border: 1px solid color("gray9");
+    font-weight: $fontWeightSemibold;
+    font-family: $fontFamilySecondary;
+}

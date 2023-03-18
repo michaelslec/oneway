@@ -1,0 +1,37 @@
+@use "sass:map";
+
+.blog-item {
+    display: block;
+    // margin-bottom: 1rem;
+    height: 100%;
+    border: 1px solid color("gray3");
+    text-decoration: none;
+    color: color("gray9");
+}
+
+.blog-item:hover,
+.blog-item:hover *,
+.blog-item:focus,
+.blog-item:focus *,
+.blog-item:active,
+.blog-item:active * {
+    // color: color( "sea");
+    opacity: 0.9;
+}
+
+.blog-preview-img {
+    width: 100%;
+    height: 280px;
+    background-color: color("sea");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+// text-uppercase font-weight-semibold font-family-secondary
+.blog-read-more {
+    text-transform: uppercase;
+    font-weight: $fontWeightSemibold;
+    font-family: $fontFamilySecondary;
+    color: color("gray9");
+}

@@ -1,0 +1,31 @@
+@use "sass:map";
+
+.social-sharing {
+    display: flex;
+    justify-content: center;
+}
+
+.social-sharing a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: color("sea");
+    margin-right: 1rem;
+}
+
+.social-sharing a:last-of-type {
+    margin-right: 0;
+}
+
+.social-sharing a:hover,
+.social-sharing a:focus,
+.social-sharing a:active {
+    opacity: 0.9;
+}
+
+.social-sharing svg {
+    fill: #fff;
+}

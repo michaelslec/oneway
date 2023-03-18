@@ -1,0 +1,96 @@
+/* GENERAL MODAL */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+    display: none;
+    -webkit-transition: all 0.3s;
+
+    &:not(#locallyModal) {
+        .modal-window {
+            width: calc(100vw - 2rem);
+            max-width: 30rem;
+        }
+    }
+
+    .modal-window {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+        max-height: calc(100vh - 4rem);
+        overflow-y: scroll;
+    }
+
+    .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 2rem;
+        padding: 0 0.75rem;
+        background-color: color("mist");
+        border-bottom: 1px solid color("gray3");
+    }
+}
+
+
+// ESSENTIALS BUNDLE
+
+#modal_essentials_bundle {
+    img {
+        // border: 1px solid color("gray3");
+        border-radius: 3px;
+    }
+}
+
+
+// FOR SCROLLABLE MODALS, add .modal-body-scroll to HTML
+.modal-body.modal-body-scroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+.modal-body.modal-body-scroll::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.modal-close a {
+    height: 3rem;
+    padding: 0.875rem;
+}
+
+
+
+/* LOCALLY */
+#locally-iframe {
+    width: 100%;
+    height: calc(100vh - 4rem - 3rem - 0.875rem);
+    margin: 0px auto;
+}
+
+#locallyModal .modal-body {
+    width: calc(100vw - 4rem);
+    height: calc(100vh - 7rem);
+    padding: 0 0.875rem 0.875rem 0.875rem;
+}
