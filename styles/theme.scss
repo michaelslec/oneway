@@ -1,98 +1,100 @@
 @charset 'UTF-8';
 @use "sass:map";
 
-// Core
-@import "./core/reset";
-@import "./core/variables";
-@import "./core/flex";
-@import "./core/grid"; // &:extend???
-@import "./core/color";
-@import "./core/typography";
-@import "./core/spacing";
-@import "./core/responsive";
-@import "./core/icons";
-@import "./core/form";
-@import "./core/table";
-@import "./core/link";
+.tim-base-container {
+    // Core
+    @import "./core/reset";
+    @import "./core/variables";
+    @import "./core/flex";
+    @import "./core/grid"; // &:extend???
+    @import "./core/color";
+    @import "./core/typography";
+    @import "./core/spacing";
+    @import "./core/responsive";
+    @import "./core/icons";
+    @import "./core/form";
+    @import "./core/table";
+    @import "./core/link";
 
-main {
-    min-height: calc(100vh - 5rem); // 100vh - header & footer
-}
+    .sezzle-checkout-modal-hidden {
+        margin-top: 0 !important;
+    }
 
-.sezzle-checkout-modal-hidden {
-    margin-top: 0 !important;
-}
+    // Sections
+    @import "./sections/featured-collection";
+    @import "./sections/footer";
+    @import "./sections/header";
+    @import "./sections/hero";
+    @import "./sections/homepage-newsletter";
+    @import "./sections/upsell";
+    @import "./sections/responsive-hero-homepage";
+    @import "./sections/meet-pico-info";
+    @import "./sections/featured-collection-v2";
+    @import "./sections/press";
+    @import "./sections/featured_reviews";
+    @import "./sections/certified-section";
+    @import "./sections/recycle-section";
+    @import "./sections/sustainability-products-info-section";
+    @import "./sections/our-story-hero";
+    @import "./sections/our-story-icon-section";
 
-// Sections
-@import "./sections/featured-collection";
-@import "./sections/footer";
-@import "./sections/header";
-@import "./sections/hero";
-@import "./sections/homepage-newsletter";
-@import "./sections/upsell";
-@import "./sections/responsive-hero-homepage";
-@import "./sections/meet-pico-info";
-@import "./sections/featured-collection-v2";
-@import "./sections/press";
-@import "./sections/featured_reviews";
-@import "./sections/certified-section";
-@import "./sections/recycle-section";
-@import "./sections/sustainability-products-info-section";
-@import "./sections/our-story-hero";
-@import "./sections/our-story-icon-section";
+    // Snippets
+    @import "./snippets/accordion";
+    @import "./snippets/hero";
+    @import "./snippets/modal";
+    @import "./snippets/pagination";
+    @import "./snippets/social-sharing";
+    @import "./snippets/wave";
 
-// Snippets
-@import "./snippets/accordion";
-@import "./snippets/hero";
-@import "./snippets/modal";
-@import "./snippets/pagination";
-@import "./snippets/social-sharing";
-@import "./snippets/wave";
+    // Components
+    @import "./components/button.scss";
+    @import "./components/product-gallery.scss";
 
-// Components
-@import "./components/button.scss";
-@import "./components/product-gallery.scss";
+    // Templates
+    @import "./templates/article";
+    @import "./templates/blog";
+    @import "./templates/cart";
+    @import "./templates/collection";
+    @import "./templates/page.faq";
+    @import "./templates/product";
+    @import "./templates/search";
+    @import "./templates/sustainability";
 
-// Templates
-@import "./templates/article";
-@import "./templates/blog";
-@import "./templates/cart";
-@import "./templates/collection";
-@import "./templates/page.faq";
-@import "./templates/product";
-@import "./templates/search";
-@import "./templates/sustainability";
+    #safety-standards,
+    #shipping-amp-returns,
+    #warranty,
+    #refund-policy {
 
-#safety-standards,
-#shipping-amp-returns,
-#warranty,
-#refund-policy {
+        h1,
+        h2,
+        h3 {
+            color: color("mist");
 
-    h1,
-    h2,
-    h3 {
-        color: color("mist");
+            b,
+            strong {
+                color: color("mist");
+            }
+        }
 
         b,
         strong {
-            color: color("mist");
+            color: color("sea");
         }
     }
 
-    b,
-    strong {
-        color: color("sea");
+    // MISC:
+    .shopify-challenge__container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .shopify-challenge__button {
+        color: color("white");
+        background-color: color("sun");
+        border-radius: $borderRadius;
     }
 }
 
-// MISC:
-.shopify-challenge__container {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.shopify-challenge__button {
-    color: color("white");
-    background-color: color("sun");
-    border-radius: $borderRadius;
+main {
+    min-height: calc(100vh - 5rem); // 100vh - header & footer
 }

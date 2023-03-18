@@ -34,17 +34,32 @@ $fontWeightBold: 700;
 
 // SIZES - Sizes are defined using REMs for accessibility, but named using pixels (based on base of 16) for simplicity's sake
 
-$fontSize48: 3rem; // 48px
-$fontSize40: 2.5rem; // 40px
-$fontSize32: 2rem; // 32px
-$fontSize24: 1.5rem; // 24px
-$fontSize20: 1.25rem; // 20px
-$fontSize18: 1.125rem; // 18px
-$fontSize16: 1rem; // 16px
-$fontSize14: 0.875rem; // 14px
-$fontSize12: 0.75rem; // 12px
-$fontSize10: 0.625rem; // 10px
-$fontSize8: 0.5rem; // 8px
+$fontSize144: 14.4rem; // 144px
+$fontSize120: 12rem; // 120px
+$fontSize96: 9.6rem; // 96px
+$fontSize48: 4.8rem; // 48px
+$fontSize40: 4rem; // 40px
+$fontSize32: 3.2rem; // 32px
+$fontSize24: 2.4rem; // 24px
+$fontSize20: 2rem; // 20px
+$fontSize18: 1.8rem; // 18px
+$fontSize16: 1.6rem; // 16px
+$fontSize14: 1.4rem; // 14px
+$fontSize12: 1.2rem; // 12px
+$fontSize10: 1rem; // 10px
+$fontSize8: 0.8rem; // 8px
+
+.font-144 {
+    font-size: $fontSize144
+}
+
+.font-120 {
+    font-size: $fontSize120
+}
+
+.font-96 {
+    font-size: $fontSize96
+}
 
 .font-48 {
     font-size: $fontSize48;

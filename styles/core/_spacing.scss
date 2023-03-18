@@ -15,14 +15,17 @@
 .m-none {
     margin: 0 !important;
 }
+
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
 }
+
 .my-auto {
     margin-top: auto;
     margin-bottom: auto;
 }
+
 .p-none {
     padding: 0 !important;
 }
@@ -33,26 +36,30 @@ $grid-breakpoints: (
     md: 768px,
     lg: 992px,
     xl: 1200px,
-) !default;
+    ) !default;
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
 //
 //    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    576px
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-    $min: map-get($breakpoints, $name);
-    @return if($min != 0, $min, null);
+    $min: map-get($breakpoints, $name
+);
+@return if($min !=0, $min, null);
 }
 
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
     $min: breakpoint-min($name, $breakpoints);
+
     @if $min {
         @media (min-width: $min) {
             @content;
         }
-    } @else {
+    }
+
+    @else {
         @content;
     }
 }
@@ -65,7 +72,7 @@ $grid-breakpoints: (
 //    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    "-sm"
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-    @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+    @return if(breakpoint-min($name, $breakpoints)==null, "", "-#{$name}");
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -73,27 +80,32 @@ $grid-breakpoints: (
         $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
         // Generate spaces in increments of 25 from 800 to 0...
-        @each $spacer, $abbrev in (margin: m, padding: p) {
-            $amt: 800;
-            @while $amt >= 0 {
+        @each $spacer,
+        $abbrev in (margin: m, padding: p) {
+            $amt: 12800;
+
+            @while $amt >=0 {
+
                 // Omni-directional Spacing (.m-100)
                 .#{$abbrev}#{$infix}-#{$amt} {
                     #{$spacer}: #{calc($amt/100)}rem;
                 }
+
                 // Horizontal Spacing (.mx-100)
                 .#{$abbrev}x#{$infix}-#{$amt} {
                     #{$spacer}-left: #{calc($amt/100)}rem;
                     #{$spacer}-right: #{calc($amt/100)}rem;
                 }
+
                 // Vertical Spacing (.my-100)
                 .#{$abbrev}y#{$infix}-#{$amt} {
                     #{$spacer}-top: #{calc($amt/100)}rem;
                     #{$spacer}-bottom: #{calc($amt/100)}rem;
                 }
+
                 // Unidirectional (.mr-100);
                 @each $direction,
-                    $d-abbrev in (top: t, right: r, bottom: b, left: l)
-                {
+                $d-abbrev in (top: t, right: r, bottom: b, left: l) {
                     .#{$abbrev}#{$d-abbrev}#{$infix}-#{$amt} {
                         #{$spacer}-#{$direction}: #{calc($amt/100)}rem;
                     }

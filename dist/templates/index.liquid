@@ -1,3 +1,51 @@
 {{ 'theme.css' | asset_url | stylesheet_tag }}
 
-<h1>test</h1>
+<div class="tim-base-container">
+  <div class="row-fluid px-0 grid-gap-0 res-hero-homepage">
+    <div class="col-md-6 start-md-2 hero-half">
+      <div class="hero-half-inner pt-sm-1250">
+        <h1
+          style="width: 6em; word-break: keep-all"
+          class="color-white mb-150 font-weight-semibold font-96 font-sm-40"
+        >
+          Interesting CTA
+        </h1>
+
+        <a
+          style="width: fit-content;"
+          class="btn btn-lg btn-round btn-sea p-800 text-uppercase"
+          href="/collections/shop-all"
+          >Shop Now</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid px-0 grid-gap-0">
+    <section class="col-md-10 col-lg-8 start-md-2 start-lg-3">
+      <div style="background-color: red;">a</div>
+    </section>
+  </div>
+
+  {% comment %}
+    <section class="row-fluid meet-pico-section">
+      <div class="col-md-6 image-container">
+        <img
+          class="img-fluid"
+          src="https://fastly.picsum.photos/id/223/960/640.jpg?hmac=nHFea6IBIjsf2_LWRsA4h1Uf9ro4WV5if1SfSP5Fp6U"
+          alt="Image of Mother holding Pico Car Seat with Child"
+          width="700"
+          height="700"
+          loading="lazy"
+        >
+      </div>
+      <div class="col-md-6 content-container flex flex-column justify-content-center align-items-center">
+        <div class="text-uppercase mb-150 font-18 color-mist">Meet Pico</div>
+        <h2 class="font-32 text-center mb-md-300 mb-sm-100 px-200">
+          The perfect portable car seat for everyday &amp; travel convenience
+        </h2>
+
+        <a class="cta-link text-uppercase" href="/collections/shop-all">Learn More</a>
+      </div>
+    </section>
+  {% endcomment %}
+</div>

@@ -1,56 +1,55 @@
-.template-index {
+.res-hero-homepage {
+    min-height: 70rem;
+    background-color: color("sea");
+    background-image: url('https://fastly.picsum.photos/id/563/1920/1080.jpg?hmac=q-crUEfV34UnGAk6wr29t1tQ91W9D8pDgyXts7ZIW98');
+    background-repeat: no-repeat;
+    background-position: 25% center;
+    background-size: cover;
 
-    .res-hero-homepage {
-        min-height: 70vh;
-        background-color: color("sea");
-        background-image: url('home_page_banner_desktop.jpg');
-        background-repeat: no-repeat;
-        background-position: 25% center;
-        background-size: cover;
+    @include breakpoint(sm, down) {
+        background-image: url('https://fastly.picsum.photos/id/563/1920/1080.jpg?hmac=q-crUEfV34UnGAk6wr29t1tQ91W9D8pDgyXts7ZIW98');
+        background-position: center;
+        min-height: 80vh;
+    }
 
-        @include breakpoint(sm, down) {
-            background-image: url('home_page_banner_mobile.jpg');
-            background-position: center;
-            min-height: 80vh;
+    .hero-half {
+        color: color("white");
+        text-align: left;
+        background-color: unset;
+        padding: 1.6rem;
+
+        @include breakpoint(lg) {
+            max-width: 500px;
         }
 
-        .hero-half {
-            color: color("white");
-            text-align: center;
-            background-color: unset;
-            padding: 1rem;
+        .hero-half-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: top;
+            padding-bottom: 4.8rem;
+            height: 100%;
+        }
 
-            @include breakpoint(lg) {
-                max-width: 500px;
-            }
-
+        @include breakpoint(sm, down) {
             .hero-half-inner {
-                display: flex;
-                flex-direction: column;
+                justify-content: flex-end;
                 align-items: center;
-                justify-content: center;
-                padding-bottom: 3rem;
+                padding-bottom: 6.4rem;
                 height: 100%;
             }
 
-            @include breakpoint(sm, down) {
-                .hero-half-inner {
-                    // display: flex;
-                    // flex-direction: column;
-                    // align-items: center;
-                    justify-content: flex-end;
-                    padding-bottom: 4rem;
-                    height: 100%;
-                }
+            h1 {
+                text-align: center;
             }
         }
+    }
 
-        h1 {
-            text-align: center;
-        }
+    h1 {
+        text-align: left;
+    }
 
-        .cta-link {
-            border-bottom: 2px solid color("white");
-        }
+    .cta-link {
+        border-bottom: 2px solid color("white");
     }
 }

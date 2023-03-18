@@ -5,10 +5,10 @@
     align-items: center;
     justify-content: center;
     height: 40px;
-    padding: 0 1rem;
+    padding: 0 1.6rem;
     border: 1px solid transparent;
     border-radius: 2px;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-family: $fontFamilySecondary;
     font-weight: $fontWeightMedium;
     line-height: 1.25em;
@@ -28,10 +28,10 @@
     align-items: center;
     justify-content: center;
     height: 40px;
-    padding: 0 1rem;
+    padding: 0.8 1.6rem;
     border: 1px solid transparent;
-    border-radius: 1.2rem !important;
-    font-size: 2.2rem !important;
+    border-radius: 1.92rem !important;
+    font-size: 3.52rem !important;
     font-family: $fontFamilySecondary;
     font-weight: $fontWeightBold;
     line-height: 1.25em;
@@ -124,38 +124,38 @@ $color in $primaryColors {
 /* sizing */
 .btn-sm {
     height: 32px;
-    padding: 0 0.75rem;
-    font-size: 0.75rem;
+    padding: 0 1.2rem;
+    font-size: 1.2rem;
     font-weight: $fontWeightSemibold;
     text-transform: uppercase;
 
     &.btn-round {
-        border-radius: 1rem;
+        border-radius: 1.6rem;
     }
 }
 
 .btn-xs {
     height: 24px;
-    padding: 0 0.375rem;
-    font-size: 0.75rem;
+    padding: 0 0.6rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
 
     &.btn-round {
-        border-radius: 0.75rem;
+        border-radius: 1.2rem;
     }
 }
 
 .btn-lg {
     // padding: 0 1.25rem;
     // font-size: 1.25rem;
-    height: 4rem;
+    height: 6.4rem;
     font-size: $fontSize18;
-    border-radius: 0.25rem;
+    border-radius: 0.4rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 
     &.btn-round {
-        border-radius: 2rem;
+        border-radius: 3.2rem;
     }
 }
 
@@ -168,5 +168,5 @@ $color in $primaryColors {
 }
 
 .btn-block+.btn-block {
-    margin-top: 1rem;
+    margin-top: 1.6rem;
 }

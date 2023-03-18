@@ -3,28 +3,28 @@
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
 }
 
 .row-fluid {
     width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
 }
 
 .row,
 .row-fluid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 2rem 1rem;
+    grid-gap: 3.2rem 1.6rem;
 }
 
 .row-auto {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
-    grid-gap: 1rem;
-    width: calc(100% - 2rem);
+    grid-template-columns: repeat(auto-fit, minmax(1.6rem, 1fr));
+    grid-gap: 1.6rem;
+    width: calc(100% - 3.2rem);
 }
 
 @media (min-width: 576px) {
@@ -32,7 +32,7 @@
     .row,
     .row-fluid,
     .row-auto {
-        grid-gap: 2rem;
+        grid-gap: 3.2rem;
     }
 
     .row,
