@@ -1,6 +1,14 @@
 @use "sass:color";
 @use "sass:map";
 
+$shopifyColors: (
+    "foreground": rgb(var(--color-foreground)),
+    "background": rgb(var(--color-background)),
+    "button": rgb(var(--color-button)),
+    "button-text": rgb(var(--color-button-text)),
+    "gradient-background": rgb(var(--gradient-background)),
+);
+
 $primaryColors: (
     "dust": #F3EFE5,
     "mist": #81A4A5,
@@ -44,7 +52,7 @@ $grays: (
     "gray9": #444,
 );
 
-$colors: map-collect($primaryColors, $primaryVariants, $secondaryColors, $grays);
+$colors: map-collect($shopifyColors, $primaryColors, $primaryVariants, $secondaryColors, $grays);
 
 // .bg-sea, .color-sea, etc
 @each $name,

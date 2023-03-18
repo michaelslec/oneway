@@ -16,6 +16,18 @@
     @import "./core/table";
     @import "./core/link";
 
+    @each $name,
+    $color in $colors {
+        .border-solid-#{$name} {
+            border: 1px solid $color;
+        }
+
+    }
+
+    .border-solid-thick {
+        border-width: 2px;
+    }
+
     .sezzle-checkout-modal-hidden {
         margin-top: 0 !important;
     }
