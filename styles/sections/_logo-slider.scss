@@ -5,12 +5,14 @@ logo-slider {
 
     --image-size: #{$max-image-size};
 
-    padding: 20px;
+    padding: 1rem;
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
     position: relative;
     display: flex;
+    border-top: 1px solid color("gray9");
+    border-bottom: 1px solid color("gray9");
 
     &:hover div {
         animation-play-state: paused;
