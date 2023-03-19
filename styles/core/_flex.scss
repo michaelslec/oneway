@@ -21,6 +21,16 @@
     flex-direction: column;
 }
 
+@media screen and (min-width: 993px) {
+    .flex-row-md {
+        flex-direction: row;
+    }
+
+    .flex-column-md {
+        flex-direction: column;
+    }
+}
+
 .justify-content-start {
     justify-content: flex-start;
 }
