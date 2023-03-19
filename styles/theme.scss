@@ -32,6 +32,52 @@
         margin-top: 0 !important;
     }
 
+
+    .featured-product {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: color("gray9");
+        color: color("white");
+    }
+
+    .card-text>* {
+        color: color("white");
+        opacity: 1;
+    }
+
+    .featured-product:hover .overlay {
+        opacity: .8;
+    }
+
+
+    .shop-button {
+        display: inline-block;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 25px;
+            background: currentColor;
+            top: 50%;
+            left: 0px;
+            transition: var(all 0.3s linear);
+        }
+
+    }
+
     // Sections
     @import "./sections/featured-collection";
     @import "./sections/footer";

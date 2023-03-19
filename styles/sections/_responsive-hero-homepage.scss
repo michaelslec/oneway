@@ -33,7 +33,7 @@
 
         @include breakpoint(sm, down) {
             .hero-half-inner {
-                justify-content: flex-end;
+                justify-content: center;
                 align-items: center;
                 padding-bottom: 6.4rem;
                 height: 100%;
