@@ -23,6 +23,11 @@
         display: block;
         width: 96px;
         margin-bottom: 2.4rem;
+
+        &-sm {
+            @extend .heading-line;
+            width: 48px;
+        }
     }
 
     @each $name,
