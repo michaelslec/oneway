@@ -24,11 +24,11 @@
   </div>
   <section
     class="col-md-10 col-lg-8 start-md-2 start-lg-3 py-150 border-solid-gray4 bg-background flex flex-row flex-wrap justify-content-center mx-auto px-150"
-    style="gap: 1.6rem; transform: translateY(-20%); width: 80%; overflow: hidden; height: 450px;"
+    style="gap: 1.6rem; transform: translateY(-20%); max-width: 80%; overflow: hidden; height: 450px;"
   >
     {% for product in collections.featured.products limit: 3 %}
-      <article class="featured-product" style="min-height: 450px;">
-        <img src="{{ product.featured_image | image_url: height: 350 }}" style="width: 100%;">
+      <article class="featured-product" style="height: calc(450px - 3rem)">
+        <img src="{{ product.featured_image | image_url: height: 350 }}" style="object-fit: content; width: 100%;">
         <div class="overlay flex flex-wrap flex-column {% if forloop.index == 2 %}justify-content-start{% else %} justify-content-end{% endif %} p-300">
           <div class="card-text">
             <span>Starting from {{ product.price_min | money }}</span>
