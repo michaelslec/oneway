@@ -16,6 +16,15 @@
     @import "./core/table";
     @import "./core/link";
 
+    hr.heading-line {
+        border: none;
+        height: 0.1rem;
+        background-color: rgba(var(--color-foreground), 0.4);
+        display: block;
+        width: 96px;
+        margin-bottom: 2.4rem;
+    }
+
     @each $name,
     $color in $colors {
         .border-solid-#{$name} {

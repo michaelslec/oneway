@@ -22,6 +22,7 @@
       </div>
     </div>
   </div>
+
   <section
     class="col-md-10 col-lg-8 start-md-2 start-lg-3 py-150 border-solid-gray4 bg-background flex flex-row flex-wrap justify-content-center mx-auto px-150"
     style="gap: 1.6rem; transform: translateY(-20%); max-width: 80%; overflow: hidden; height: 450px;"
@@ -40,32 +41,77 @@
     {% endfor %}
   </section>
 
-  <section class="bg-gray6">
+  <section class="bg-gray6" style="margin-top: -3rem">
     <logo-slider>
       <div>
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
       </div>
       <div>
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
       </div>
       <div>
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
-        <img src="http://placehold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
       </div>
     </logo-slider>
+  </section>
+
+  <section class="featured-collection mb-300 mt-500 page-width">
+    <h1 class="font-48 line-height-100">We Think You'll Like These!</h1>
+    <hr class="heading-line mt-50">
+    <div class="row-auto-test" style="width: 100%;">
+      {%- assign collection = collections.pokemon -%}
+
+      {% for product in collection.products limit: 6 %}
+        <div class="flex flex-column border-solid-gray4 p-200 justify-content-between">
+          <a href="{{ product.url | within: collection }}" class="featured-collection-item">
+            {% if product.featured_image != blank %}
+              {%
+                include 'responsive-image' with
+                image: product.featured_image,
+                max_width: 480,
+                max_height: 480,
+                image_class: "featured-collection-item__image"
+              %}
+            {% endif %}
+          </a>
+          <div class="flex flex-column">
+            <span class="font-weight-semibold">{{ product.title | escape }}</span>
+            <span>
+              {% if product.compare_at_price > product.price %}
+                {% if product.price_varies %}
+                  {%- assign sale_price = product.price | money -%}
+                  {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                {% else %}
+                  {{ 'products.product.on_sale' | t }}
+                  {{ product.price | money }}
+                {% endif %}
+              {% else %}
+                {% if product.price_varies %}
+                  {%- assign price = product.price | money -%}
+                  {{ 'products.product.from_text_html' | t: price: price }}
+                {% else %}
+                  {{ product.price | money }}
+                {% endif %}
+              {% endif %}
+            </span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </section>
 </div>

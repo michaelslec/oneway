@@ -1,6 +1,5 @@
 .featured-collection-item {
     border: 1px solid color("gray3");
-    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,4 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.featured-collection-item__image {
+    width: 100%;
 }
