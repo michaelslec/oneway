@@ -11,8 +11,8 @@ logo-slider {
     margin: 0 auto;
     position: relative;
     display: flex;
-    border-top: 1px solid color("gray9");
-    border-bottom: 1px solid color("gray9");
+    border-top: 1px solid color("gray7");
+    border-bottom: 1px solid color("gray7");
 
     &:hover div {
         animation-play-state: paused;
