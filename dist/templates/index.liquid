@@ -1,7 +1,5 @@
 {{ 'theme.css' | asset_url | stylesheet_tag }}
 
-<style></style>
-
 <div class="tim-base-container">
   <div class="row-fluid px-0 grid-gap-0 res-hero-homepage">
     <div class="col-md-6 start-md-2 hero-half">
@@ -73,10 +71,10 @@
   <section class="featured-collection mb-300 mt-750 page-width">
     <h1 class="font-48 line-height-100">We Think You'll Like These!</h1>
     <hr class="heading-line mt-50">
-    <div class="row-auto-test" style="width: 100%;">
+    <div class="row-auto-test mt-500" style="width: 100%;">
       {%- assign collection = collections.pokemon -%}
 
-      {% for product in collection.products limit: 6 %}
+      {% for product in collection.products limit: 8 %}
         <div class="flex flex-column border-solid-gray4 p-200 justify-content-between">
           <a href="{{ product.url | within: collection }}" class="featured-collection-item">
             {% if product.featured_image != blank %}
@@ -115,11 +113,24 @@
     </div>
   </section>
 
+  <section class="mb-300 mt-750">
+    <div class="page-width">
+      <h1 class="font-48 line-height-100">There's A Lot Going On...</h1>
+      <hr class="heading-line mt-50">
+    </div>
+
+    <article class="bg-coral" style="width: 100%;">
+      <h2 class="font-40">You Might Have Seen Us On The TV</h2>
+      <hr class="heading-line mt-50">
+      <p>This is some dope shit, bruh</p>
+    </article>
+  </section>
+
   <section class="mb-300 mt-750 page-width">
     <h1 class="font-48 line-height-100">Find Us In Person</h1>
     <hr class="heading-line mt-50">
     <div class="row mt-500">
-      <div class="col-10 start-2 border-solid-gray4 p-400">
+      <div class="col-10 start-2 border-solid-gray4-md p-400">
         <div class="flex flex-column flex-row-md justify-content-center align-items-center">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d516.2593328343628!2d-94.62285206988938!3d31.719716282318917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86378e22419322bf%3A0x1626fd7cc031ebc4!2sOne%20Way%20Diesel%20Performance!5e0!3m2!1sen!2sus!4v1679250347529!5m2!1sen!2sus"

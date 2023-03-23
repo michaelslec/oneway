@@ -21,7 +21,7 @@
         height: 0.1rem;
         background-color: rgba(var(--color-foreground), 0.4);
         display: block;
-        width: 96px;
+        width: 72px;
         margin-bottom: 2.4rem;
 
         &-sm {
@@ -34,6 +34,16 @@
     $color in $colors {
         .border-solid-#{$name} {
             border: 1px solid $color;
+        }
+
+        .border-solid-#{$name}-md {
+            border: 1px solid $color;
+        }
+
+        @media screen and (max-width: 769px) {
+            .border-solid-#{$name}-md {
+                border: none;
+            }
         }
 
     }
