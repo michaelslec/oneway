@@ -1,4 +1,5 @@
 {{ 'theme.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'carousel.js' | asset_url }}" defer="defer"></script>
 
 <div class="tim-base-container">
   <div class="row-fluid px-0 grid-gap-0 res-hero-homepage">
@@ -41,6 +42,14 @@
 
   <section class="bg-gray5" style="margin-top: -3rem">
     <logo-slider>
+      <div>
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+      </div>
       <div>
         <img src="http://place-hold.it/75x75">
         <img src="http://place-hold.it/75x75">
@@ -119,11 +128,27 @@
       <hr class="heading-line mt-50">
     </div>
 
-    <article class="bg-coral" style="width: 100%;">
-      <h2 class="font-40">You Might Have Seen Us On The TV</h2>
-      <hr class="heading-line mt-50">
-      <p>This is some dope shit, bruh</p>
-    </article>
+    <div class="carousel">
+      <button data-offset="-1">&larr;</button>
+      <button data-offset="1">&rarr;</button>
+
+      <ul>
+        {% for page in pages %}
+          <li
+            class="slide"
+            {% if forloop.index == 1 %}
+              data-active
+            {% endif %}
+          >
+            <article class="bg-coral">
+              <h2 class="font-40">{{ page.title }}</h2>
+              <hr class="heading-line mt-50">
+              <p>This is some dope shit, bruh</p>
+            </article>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </section>
 
   <section class="mb-300 mt-750 page-width">
