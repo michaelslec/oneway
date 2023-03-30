@@ -37,7 +37,9 @@ $fontWeightBold: 700;
 $fontSize144: 14.4rem; // 144px
 $fontSize120: 12rem; // 120px
 $fontSize96: 9.6rem; // 96px
+$fontSize84: 8.4rem; // 84px
 $fontSize72: 7.2rem; // 72px
+$fontSize60: 6.0rem; // 60px
 $fontSize48: 4.8rem; // 48px
 $fontSize40: 4rem; // 40px
 $fontSize32: 3.2rem; // 32px
@@ -60,6 +62,10 @@ $fontSize8: 0.8rem; // 8px
 
 .font-96 {
     font-size: $fontSize96;
+}
+
+.font-84 {
+    font-size: $fontSize84;
 }
 
 .font-72 {
@@ -115,6 +121,10 @@ h2 {
 @include breakpoint(sm, down) {
     .font-sm-72 {
         font-size: $fontSize72;
+    }
+
+    .font-sm-60 {
+        font-size: $fontSize60;
     }
 
     .font-sm-48 {
