@@ -1,63 +1,60 @@
-.carousel {
-    position: relative;
-    width: 100vw;
+@use "sass:color";
+
+.carousel-cell {
     height: 400px;
+    width: 100%;
+    padding: 2.4rem;
+    margin: 0 1.2rem;
+    border-radius: 8px;
+}
 
-    & ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-    }
-
-    & button {
-        position: absolute;
-        background: none;
-        border: none;
-        font-size: 4rem;
-        top: 50%;
-        z-index: 2;
-        transform: translateY(-50%);
-        color: rgba(255, 255, 255, 0.5);
-        cursor: pointer;
-        border-radius: 0.25rem;
-        padding: 0 0.5rem;
-        background-color: rgba(0, 0, 0, 0.1);
-
-        &:hover,
-        &:focus {
-            color: white;
-            background-color: rgba(0, 0, 0, .2);
-        }
-
-        &:focus {
-            outline: 1px solid black;
-        }
-
-        &[data-offset="-1"] {
-            left: 1rem;
-        }
-
-        &[data-offset="1"] {
-            right: 1rem;
-        }
+@media screen and (min-width: 576px) {
+    .carousel-cell {
+        margin: 0 2.4rem;
+        width: 50%;
     }
 }
 
+.main-carousel {
+    box-shadow: none;
+}
 
-.slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
+.flickity-button {
+    background: transparent;
+    color: rgb(var(--color-foreground));
+    opacity: .25;
 
-    &[data-active] {
-        opacity: 1;
-        transition: 200ms opacity ease-in-out;
-        z-index: 1;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.flickity-prev-next-button {
+    transition: 300ms ease-in-out;
+    width: 30px;
+    height: 30px;
+
+    &:hover,
+    &:focus {
+        width: 40px;
+        height: 40px;
+        opacity: .8;
+        background: linear-gradient(to right, rgb(25, 25, 25, .05), rgb(25, 25, 25, .25));
+
+        &.next {
+            right: 6px;
+        }
+
+        &.previous {
+            left: 6px;
+        }
     }
 
-    & article {
-        height: 100%;
+    &.next {
+        right: -4px;
+    }
+
+    &.previous {
+        left: -4px;
     }
 }

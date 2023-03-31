@@ -128,26 +128,19 @@
       <hr class="heading-line mt-50">
     </div>
 
-    <div class="carousel">
-      <button data-offset="-1">&larr;</button>
-      <button data-offset="1">&rarr;</button>
-
-      <ul>
-        {% for page in pages %}
-          <li
-            class="slide"
-            {% if forloop.index == 1 %}
-              data-active
-            {% endif %}
-          >
-            <article class="bg-coral">
-              <h2 class="font-40">{{ page.title }}</h2>
-              <hr class="heading-line mt-50">
-              <p>This is some dope shit, bruh</p>
-            </article>
-          </li>
-        {% endfor %}
-      </ul>
+    <div
+      class="main-carousel"
+      data-flickity='{ "wrapAround": true, "pageDots": false }'
+    >
+      {% for page in pages %}
+        <article
+          class="carousel-cell bg-coral"
+        >
+          <h2 class="font-40">{{ page.title }}</h2>
+          <hr class="heading-line mt-50">
+          <p>This is some dope shit, bruh</p>
+        </article>
+      {% endfor %}
     </div>
   </section>
 
