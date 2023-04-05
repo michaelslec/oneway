@@ -49,7 +49,7 @@
     }
 }
 
-.flickity-button {
+.featured-carousel .flickity-button {
     background: transparent;
     color: rgb(var(--color-foreground));
     opacity: .25;
@@ -59,32 +59,125 @@
     }
 }
 
-.flickity-prev-next-button {
-    transition: 300ms ease-in-out;
-    width: 30px;
-    height: 30px;
+@include breakpoint(lg, down) {
+    .main-carousel {
+        .flickity-button {
+            background: transparent;
+            color: rgb(var(--color-foreground));
+            opacity: .25;
 
-    &:hover,
-    &:focus {
-        width: 40px;
-        height: 40px;
-        opacity: .8;
-        background: linear-gradient(to right, rgb(25, 25, 25, .05), rgb(25, 25, 25, .25));
-
-        &.next {
-            right: 6px;
+            &:focus {
+                box-shadow: none;
+            }
         }
 
-        &.previous {
-            left: 6px;
+        .flickity-prev-next-button {
+            transition: 300ms ease-in-out;
+            width: 30px;
+            height: 30px;
+
+            &:hover,
+            &:focus {
+                width: 40px;
+                height: 40px;
+                opacity: .8;
+                background: linear-gradient(to right, rgb(25, 25, 25, .05), rgb(25, 25, 25, .25));
+
+                &.next {
+                    right: 6px;
+                }
+
+                &.previous {
+                    left: 6px;
+                }
+            }
+
+            @include breakpoint(sm, down) {
+                &.next {
+                    right: -4px;
+                }
+
+                &.previous {
+                    left: -4px;
+                }
+            }
+
+            @include breakpoint(md) {
+                &.next {
+                    right: 24px;
+                }
+
+                &.previous {
+                    left: 24px;
+                }
+            }
+
         }
     }
+}
 
-    &.next {
-        right: -4px;
+@include breakpoint(xl) {
+    .main-carousel {
+        .flickity-prev-next-button {
+            &.next {
+                right: 20px;
+            }
+
+            &.previous {
+                left: 20px;
+            }
+        }
     }
+}
 
-    &.previous {
-        left: -4px;
+@include breakpoint(lg) {
+
+    .featured-carousel .flickity-button {
+        opacity: .5;
+    }
+}
+
+.featured-carousel {
+    .flickity-prev-next-button {
+        transition: 300ms ease-in-out;
+        width: 30px;
+        height: 30px;
+
+        &:hover,
+        &:focus {
+            width: 40px;
+            height: 40px;
+            opacity: .8;
+            background: linear-gradient(to right, rgb(25, 25, 25, .05), rgb(25, 25, 25, .25));
+
+            &.next {
+                right: 6px;
+            }
+
+            &.previous {
+                left: 6px;
+            }
+        }
+
+        @include breakpoint(sm, down) {
+            &.next {
+                right: -4px;
+            }
+
+            &.previous {
+                left: -4px;
+            }
+        }
+
+        @include breakpoint(md) {
+            &.next {
+                right: 24px;
+            }
+
+            &.previous {
+                left: 24px;
+            }
+        }
+
     }
 }
