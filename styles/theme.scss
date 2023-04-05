@@ -2,6 +2,7 @@
 @use "sass:map";
 
 .tim-base-container {
+    overflow: hidden;
     // Core
     @import "./core/reset";
     @import "./core/variables";

@@ -31,7 +31,26 @@ $breakpoints: (
     // If the key doesn't exist in the map
     @else {
         @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+        +"Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@mixin breakpoint-range($breakpoint-min, $breakpoint-max: up) {
+    @if not map-has-key($breakpoints, $breakpoint-min) {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint-min}`. "
+        +"Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+
+    @else if not map-has-key($breakpoints, $breakpoint-max) {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint-max}`. "
+        +"Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @media (min-width: map-get($breakpoints, $breakpoint-min)) and (max-width: calc(map-get($breakpoints, $breakpoint-max) - 1px)) {
+            @content;
+        }
     }
 }
 

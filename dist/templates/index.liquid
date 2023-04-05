@@ -78,13 +78,19 @@
   </section>
 
   <section class="featured-collection mb-300 mt-750 page-width">
-    <h1 class="font-48 line-height-100">We Think You'll Like These!</h1>
-    <hr class="heading-line mt-50">
-    <div class="row-auto-test mt-500" style="width: 100%;">
+    <div class="page-width">
+      <h1 class="font-48 line-height-100">We Think You'll Like These!</h1>
+      <hr class="heading-line mt-50">
+    </div>
+    <div
+      class="row-auto-test mt-500 featured-carousel"
+      style="width: 100%;"
+      data-flickity='{"wrapAround": true, "watchCSS": true, "autoHeight": true}'
+    >
       {%- assign collection = collections.pokemon -%}
 
       {% for product in collection.products limit: 8 %}
-        <div class="flex flex-column border-solid-gray4 p-200 justify-content-between">
+        <div class="flex flex-column border-solid-gray4-md p-200 justify-content-between carousel-cell">
           <a href="{{ product.url | within: collection }}" class="featured-collection-item">
             {% if product.featured_image != blank %}
               {%
@@ -130,16 +136,19 @@
 
     <div
       class="main-carousel"
-      data-flickity='{ "wrapAround": true, "pageDots": false }'
+      data-flickity='{ "wrapAround": true, "pageDots": false, "autoHeight": true}'
     >
-      {% for page in pages %}
-        <article
-          class="carousel-cell bg-coral"
-        >
-          <h2 class="font-40">{{ page.title }}</h2>
-          <hr class="heading-line mt-50">
-          <p>This is some dope shit, bruh</p>
-        </article>
+      {% for article in blogs.news.articles %}
+        <a href="{{article.url}}" class="carousel-cell">
+          <article>
+            <h2 class="font-32">{{ article.title }}</h2>
+            <hr class="heading-line mt-50">
+            <img
+              src="{{ article.image | image_url: width: 100% }}"
+              style="width: 100%; object-fit: cover;"
+            >
+          </article>
+        </a>
       {% endfor %}
     </div>
   </section>
@@ -147,7 +156,7 @@
   <section class="mb-300 mt-750 page-width">
     <h1 class="font-48 line-height-100">Find Us In Person</h1>
     <hr class="heading-line mt-50">
-    <div class="row mt-500">
+    <div class="row-lg mt-500">
       <div class="col-10 start-2 border-solid-gray4-md p-400">
         <div class="flex flex-column flex-row-md justify-content-center align-items-center">
           <iframe
