@@ -2,7 +2,7 @@
 @use "sass:map";
 
 .tim-base-container {
-    overflow: hidden;
+    overflow-x: hidden;
     // Core
     @import "./core/reset";
     @import "./core/variables";
@@ -16,6 +16,25 @@
     @import "./core/form";
     @import "./core/table";
     @import "./core/link";
+
+    .maps-wrapper {
+        aspect-ratio: 6/4;
+        flex-grow: 1;
+        margin-right: 12rem;
+        max-height: 550px;
+    }
+
+    @include breakpoint(lg, down) {
+        .maps-wrapper {
+            margin-right: 0;
+        }
+    }
+
+    @media (min-width: 0) and (max-width: 575px) {
+        #contact-heading {
+            font-size: 3.2rem;
+        }
+    }
 
     hr.heading-line {
         border: none;

@@ -35,6 +35,7 @@ $breakpoints: (
     }
 }
 
+
 @mixin breakpoint-range($breakpoint-min, $breakpoint-max: up) {
     @if not map-has-key($breakpoints, $breakpoint-min) {
         @warn "Unfortunately, no value could be retrieved from `#{$breakpoint-min}`. "

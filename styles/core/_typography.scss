@@ -1,4 +1,5 @@
 // @import "color";
+@import "variables";
 
 /* Font Declaration */
 // Fonts Imported in theme.liquid for Speed purposes...
@@ -33,6 +34,47 @@ $fontWeightBold: 700;
 }
 
 // SIZES - Sizes are defined using REMs for accessibility, but named using pixels (based on base of 16) for simplicity's sake
+
+$font-sizes: (
+    144: 14.4rem,
+    120: 12rem,
+    96: 9.6rem,
+    84: 8.4rem,
+    72: 7.2rem,
+    60: 6.0rem,
+    48: 4.8rem,
+    40: 4rem,
+    32: 3.2rem,
+    24: 2.4rem,
+    20: 2rem,
+    18: 1.8rem,
+    16: 1.6rem,
+    14: 1.4rem,
+    12: 1.2rem,
+    10: 1rem,
+    8: 0.8rem,
+);
+
+@each $bp-name,
+$bp-width in $breakpoints {
+
+    @each $fs-name,
+    $fs in $font-sizes {
+        @include breakpoint($bp-name) {
+            .font-#{$bp-name}-#{$fs-name} {
+                font-size: $fs
+            }
+        }
+    }
+}
+
+@each $fs-name,
+$fs in $font-sizes {
+    .font-#{$fs-name} {
+        font-size: $fs
+    }
+}
+
 
 $fontSize144: 14.4rem; // 144px
 $fontSize120: 12rem; // 120px
