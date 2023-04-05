@@ -1,13 +1,17 @@
 @use "sass:color";
 
-.main-carousel .carousel-cell {
+.carousel-cell {
     max-height: 800px;
     width: 100%;
     padding: 2.4rem;
     margin: 0 1.2rem;
     border-radius: 8px;
+}
+
+.main-carousel .carousel-cell {
     background-color: rgb(250, 250, 250);
 }
+
 
 @include breakpoint(sm) {
     .carousel-cell {
@@ -34,7 +38,7 @@
     display: none;
 }
 
-@include breakpoint(lg) {
+@include breakpoint(xl) {
     .featured-carousel:after {
         content: ''
     }
