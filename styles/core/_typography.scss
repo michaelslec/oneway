@@ -160,56 +160,6 @@ h2 {
     font-size: $fontSize8;
 }
 
-@include breakpoint(sm, down) {
-    .font-sm-72 {
-        font-size: $fontSize72;
-    }
-
-    .font-sm-60 {
-        font-size: $fontSize60;
-    }
-
-    .font-sm-48 {
-        font-size: $fontSize48;
-    }
-
-    .font-sm-32 {
-        font-size: $fontSize32;
-    }
-
-    .font-sm-24 {
-        font-size: $fontSize24;
-    }
-
-    .font-sm-20 {
-        font-size: $fontSize20;
-    }
-
-    .font-sm-18 {
-        font-size: $fontSize18;
-    }
-
-    .font-sm-16 {
-        font-size: $fontSize16;
-    }
-
-    .font-sm-14 {
-        font-size: $fontSize14;
-    }
-
-    .font-sm-12 {
-        font-size: $fontSize12;
-    }
-
-    .font-sm-10 {
-        font-size: $fontSize10;
-    }
-
-    .font-sm-8 {
-        font-size: $fontSize8;
-    }
-}
-
 // COLORS
 body {
     //h1, h2, h3, h4, h5, h6, a, textarea, input, select
