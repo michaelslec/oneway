@@ -1,0 +1,185 @@
+{{ 'theme.css' | asset_url | stylesheet_tag }}
+
+<div class="tim-base-container">
+  <div class="row-fluid px-0 grid-gap-0 res-hero-homepage">
+    <div class="col-md-6 start-md-2 hero-half">
+      <div class="hero-half-inner pt-sm-1250">
+        <h1
+          style="width: 6em; word-break: keep-all; max-width: 100%;"
+          class="color-white mb-150 font-weight-semibold font-96 font-sm-60"
+        >
+          Interesting CTA
+        </h1>
+
+        <a
+          style="width: fit-content;"
+          class="btn btn-lg btn-round btn-sea p-800 text-uppercase"
+          href="/collections/shop-all"
+          >Shop Now</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <section
+    class="col-md-10 col-lg-8 start-md-2 start-lg-3 py-150 border-solid-gray4 bg-background flex flex-row flex-wrap justify-content-center mx-auto px-150"
+    style="gap: 3.2rem; transform: translateY(-20%); max-width: 80%; overflow: hidden; height: 450px;"
+  >
+    {% for product in collections.featured.products limit: 3 %}
+      <article class="featured-product" style="height: calc(450px - 3rem)">
+        <img src="{{ product.featured_image | image_url: height: 350 }}" style="object-fit: content; width: 100%;">
+        <div class="overlay flex flex-wrap flex-column {% if forloop.index == 2 %}justify-content-start{% else %} justify-content-end{% endif %} p-300">
+          <div class="card-text">
+            <span>Starting from {{ product.price_min | money }}</span>
+            <h1>{{ product.title }}</h1>
+            <a href="{{ product.url }}" class="shop-button pl-400 py-200">Shop Now</a>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+
+  <section class="bg-gray5" style="margin-top: -3rem">
+    <logo-slider>
+      <div>
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+      </div>
+      <div>
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+      </div>
+      <div>
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+      </div>
+      <div>
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+        <img src="http://place-hold.it/75x75">
+      </div>
+    </logo-slider>
+  </section>
+
+  <section class="featured-collection mb-300 mt-750 page-width">
+    <h1 class="font-48 line-height-100">We Think You'll Like These!</h1>
+    <hr class="heading-line mt-50">
+    <div
+      class="row-auto-test mt-500 featured-carousel"
+      style="width: 100%;"
+      data-flickity='{"wrapAround": true, "watchCSS": true, "autoHeight": true}'
+    >
+      {%- assign collection = collections.pokemon -%}
+
+      {% for product in collection.products limit: 8 %}
+        <div class="flex flex-column border-solid-gray4-md p-200 justify-content-between carousel-cell">
+          <a href="{{ product.url | within: collection }}" class="featured-collection-item">
+            {% if product.featured_image != blank %}
+              {%
+                include 'responsive-image' with
+                image: product.featured_image,
+                max_width: 480,
+                max_height: 480,
+                image_class: "featured-collection-item__image"
+              %}
+            {% endif %}
+          </a>
+          <div class="flex flex-column">
+            <span class="font-weight-semibold">{{ product.title | escape }}</span>
+            <span>
+              {% if product.compare_at_price > product.price %}
+                {% if product.price_varies %}
+                  {%- assign sale_price = product.price | money -%}
+                  {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                {% else %}
+                  {{ 'products.product.on_sale' | t }}
+                  {{ product.price | money }}
+                {% endif %}
+              {% else %}
+                {% if product.price_varies %}
+                  {%- assign price = product.price | money -%}
+                  {{ 'products.product.from_text_html' | t: price: price }}
+                {% else %}
+                  {{ product.price | money }}
+                {% endif %}
+              {% endif %}
+            </span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-300 mt-750">
+    <div class="page-width">
+      <h1 class="font-48 line-height-100">There's A Lot Going On...</h1>
+      <hr class="heading-line mt-50">
+    </div>
+
+    <div
+      class="main-carousel"
+      data-flickity='{ "wrapAround": true, "pageDots": false, "autoHeight": true}'
+    >
+      {% for article in blogs.news.articles %}
+        <a href="{{article.url}}" class="carousel-cell">
+          <article class="mx-xl-800 mx-md-550">
+            <h2 class="font-32">{{ article.title }}</h2>
+            <hr class="heading-line mt-50">
+            <img
+              src="{{ article.image | image_url: width: 100% }}"
+              style="width: 100%; object-fit: cover;"
+            >
+          </article>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-300 mt-750 page-width">
+    <h1 class="font-48 line-height-100">Find Us In Person</h1>
+    <hr class="heading-line mt-50">
+    <div class="flex flex-column flex-row-lg justify-content-between align-items-stretch border-solid-gray4 p-150 p-xl-400 p-xxl-600">
+      <div class="maps-wrapper mb-500 mb-lg-0">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d516.2593328343628!2d-94.62285206988938!3d31.719716282318917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86378e22419322bf%3A0x1626fd7cc031ebc4!2sOne%20Way%20Diesel%20Performance!5e0!3m2!1sen!2sus!4v1679250347529!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style="border:0; max-width: 100vw;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div>
+        <h1 class="font-sm-48">Contact</h1>
+        <hr class="heading-line-sm mt-50">
+        <ul style="list-style: none; padding-left: 0;" class="mb-300">
+          <li>Phone: <a href="tel:(555) 555-5555" class="link link--text">(555) 555-5555</a></li>
+          <li>Email: <a href="mailto:test@gmail.com" class="link link--text">test@gmail.com</a></li>
+        </ul>
+
+        <h1 class="font-sm-48">Location & Hours</h1>
+        <hr class="heading-line-sm mt-50">
+        <ul style="list-style: none; padding-left: 0;">
+          <li>Hours: 8AM-5PM M-F</li>
+          <li>Address: 931 Address St, Awesomeville, TX, 77703</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
