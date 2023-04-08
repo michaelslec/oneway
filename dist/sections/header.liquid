@@ -576,8 +576,8 @@
               <header-menu>
                 <details id="Details-HeaderMenu-{{ forloop.index }}">
                   <summary class="header__menu-item list-menu__item link focus-inset {%- if link.child_active %} header__active-menu-item {% endif %}" {%- if forloop.index == 1%} style="padding-left: 0" {% endif %}>
-                    <a href="{{ link.url }}" class="nostyle">
-                      <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase }}</span>
+                    <a href="{{ link.url }}" class="nostyle {%- if link.child_active or link.current %}header__active-menu-item{% endif %}">
+                      <span {%- if link.child_active or link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase }}</span>
                     </a>
                     {% render 'icon-caret' %}
                   </summary>
