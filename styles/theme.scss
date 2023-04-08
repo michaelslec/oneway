@@ -1,12 +1,92 @@
 @charset 'UTF-8';
 @use "sass:map";
+@import "./core/flex";
+
+a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a.nostyle:hover {
+    cursor: pointer;
+}
+
+#contact-menu {
+
+    h3,
+    span {
+        opacity: .75;
+    }
+
+    &:hover {
+        h3 {
+            opacity: 1;
+        }
+    }
+
+    i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(calc(-50% + 1px));
+    }
+
+    .contact-submenu {
+        background-color: #FEFEFE;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+        position: absolute;
+        top: 100%;
+        right: -15%;
+        display: none;
+
+        li {
+            list-style-type: none;
+            padding: .8rem 2.4rem;
+            position: relative;
+
+            &:hover {
+                background-color: #DAD9D9;
+
+                span {
+                    opacity: 1;
+                }
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba(18, 18, 18, .08);
+            }
+
+            span {
+                padding-left: 32px;
+            }
+        }
+    }
+
+    &:hover .contact-submenu {
+        display: block;
+    }
+}
+
+@media (max-width: 880px) {
+    #contact-menu {
+        display: none;
+    }
+}
 
 .tim-base-container {
     overflow-x: hidden;
     // Core
     @import "./core/reset";
     @import "./core/variables";
-    @import "./core/flex";
     @import "./core/grid"; // &:extend???
     @import "./core/color";
     @import "./core/typography";

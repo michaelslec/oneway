@@ -568,7 +568,7 @@
   <hr id="nav-split" />
 {%- if section.settings.menu != blank -%}
   {%- if section.settings.menu_type_desktop == 'dropdown' -%}
-      <nav class="header__inline-menu page-width small-hide flex flex-row">
+      <nav class="header__inline-menu page-width small-hide flex justify-content-between flex-wrap">
         <ul class="list-menu list-menu--inline" role="list">
           {%- for link in section.settings.menu.links -%}
             <li>
@@ -598,8 +598,23 @@
             </li>
           {%- endfor -%}
         </ul>
-      <div>
-        <h2>asdfadsf</h2>
+      <div class="list-menu flex align-items-center" id="contact-menu" style="position: relative;">
+        <i style="position: absolute; top: 50%; transform: translateY(calc(-50% + 1px));" class="fa fa-lg fa-id-card"></i>
+        <h3 style="padding-left: 32px;">Contact Us</h3>
+        <ul class="contact-submenu" style="min-width: 30rem;">
+          <li>
+            <a class="nostyle" href="tel:(555) 555-5555">
+              <i class="fa fa-lg fa-phone"></i>
+              <span>Call Us Now: (555) 555-5555</span>
+            </a>
+          </li>
+          <li>
+            <a class="nostyle" href="mailto: jane.doe@gmail.com">
+              <i class="fa fa-lg fa-envelope"></i>
+              <span>jane.doe@gmail.com</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </nav> 
   {%- endif -%}
