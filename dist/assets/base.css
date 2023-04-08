@@ -2734,7 +2734,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 2.4rem;
+  padding: 2.4rem 4.8rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
 }
@@ -2768,6 +2768,10 @@ details[open] > .header__menu-item .icon-caret {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
   text-underline-offset: 0.3rem;
+}
+
+.header__menu-item.link {
+  font-size: 1.8rem;
 }
 
 .header__active-menu-item--oneway {
