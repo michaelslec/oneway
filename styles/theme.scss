@@ -2,13 +2,7 @@
 @use "sass:map";
 @import "./core/flex";
 
-a.nostyle:link {
-    text-decoration: inherit;
-    color: inherit;
-    cursor: auto;
-}
-
-a.nostyle:visited {
+a.nostyle:not(.header__active-menu-item) {
     text-decoration: inherit;
     color: inherit;
     cursor: auto;
