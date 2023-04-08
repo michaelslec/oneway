@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420": {
+      "type": "collection-list",
+      "blocks": {
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "2019-2021-ram-with-6-7l-cummins"
+          }
+        },
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "2007-5-2018-dodge-cummins-6-7l"
+          }
+        },
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "2003-2007-dodge-cummins-5-9l"
+          }
+        },
+        "88535814-085d-422f-9bda-86ff7c73c29a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "1998-5-2002-dodge-cummins-5-9l"
+          }
+        },
+        "549012fe-c67a-4d53-a25d-89ce84dca14b": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "1994-1998-dodge-cummins-5-9l"
+          }
+        },
+        "443e6e20-598e-4cf7-bb4c-4709a85f7621": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "1989-1993-dodge-cummins-5-9l"
+          }
+        }
+      },
+      "block_order": [
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-0",
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-1",
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-2",
+        "88535814-085d-422f-9bda-86ff7c73c29a",
+        "549012fe-c67a-4d53-a25d-89ce84dca14b",
+        "443e6e20-598e-4cf7-bb4c-4709a85f7621"
+      ],
+      "settings": {
+        "title": "Productions",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420",
+    "product-grid"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420": {
+      "type": "collection-list",
+      "blocks": {
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "2018-2021-ford-powerstroke-3-0l"
+          }
+        },
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "2014-2021-ram-1500-ecodiesel-3-0l"
+          }
+        },
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "2014-2018-grand-cherokee-ecodiesel-3-0l"
+          }
+        },
+        "88535814-085d-422f-9bda-86ff7c73c29a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "2016-2020-gm-duramax-2-8l"
+          }
+        }
+      },
+      "block_order": [
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-0",
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-1",
+        "template--18506732863761__f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420-168093483587d7f846-2",
+        "88535814-085d-422f-9bda-86ff7c73c29a"
+      ],
+      "settings": {
+        "title": "Productions",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "f7bc1080-6b2a-45ea-8ca5-9d5c63a2d420",
+    "product-grid"
+  ]
+}

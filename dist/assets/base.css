@@ -2807,10 +2807,6 @@ details[open] > .header__menu-item .icon-caret {
   font-size: 1.8rem;
 }
 
-.header__active-menu-item--oneway {
-  background-color: aqua;
-}
-
 .header__menu-item:hover .header__active-menu-item {
   text-decoration-thickness: 0.2rem;
 }
