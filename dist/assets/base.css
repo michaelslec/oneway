@@ -1909,7 +1909,7 @@ details[open] > .share-button__fallback {
   align-items: center;
   background-color: transparent;
   border: 0;
-  color: currentColor;
+  color: white;
   cursor: pointer;
   display: flex;
   height: 4.4rem;
@@ -2312,7 +2312,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: rgb(var(--color-background));
+  background-color: #FEFEFE;
 }
 
 .header-wrapper--border-bottom {
@@ -2860,6 +2860,7 @@ details-disclosure > details {
 .header__inline-menu {
   display: block;
   background-color: rgb(var(--color-background));
+  background-color: #FEFEFE;
 }
 
 @media screen and (min-width: 750px) {
@@ -2892,6 +2893,7 @@ details-disclosure > details {
 .gradient {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
+  background-color: #FEFEFE;
   background-attachment: fixed;
 }
 
