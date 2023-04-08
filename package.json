@@ -7,7 +7,7 @@
     "scss": "sass -w ./styles/:./dist/assets/  --style compressed",
     "dev": "shopify theme dev --store=one-way-diesel.myshopify.com --path ./dist",
     "push": "shopify theme push --store=one-way-diesel.myshopify.com --path ./dist",
-    "pull": "shopify theme pull --store=one-way-diesel.myshopify.com --only config/*.json  --path ./dist"
+    "pull": "shopify theme pull --store=one-way-diesel.myshopify.com --only *.json  --path ./dist"
   },
   "author": "",
   "license": "ISC",

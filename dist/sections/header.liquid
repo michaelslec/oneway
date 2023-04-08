@@ -576,7 +576,9 @@
               <header-menu>
                 <details id="Details-HeaderMenu-{{ forloop.index }}">
                   <summary class="header__menu-item list-menu__item link focus-inset {%- if link.child_active %} header__active-menu-item--oneway {% endif %}" {%- if forloop.index == 1%} style="padding-left: 0" {% endif %}>
-                    <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase }}</span>
+                    <a href="{{ link.url }}" class="nostyle">
+                      <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase }}</span>
+                    </a>
                     {% render 'icon-caret' %}
                   </summary>
                   <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
@@ -737,6 +739,16 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
+
+  document.querySelectorAll('[id^=Details-HeaderMenu-]').forEach(navDetail => {
+    navDetail.addEventListener('mouseover', _ => {
+      navDetail.setAttribute('open', '');
+    });
+
+    navDetail.addEventListener('mouseout', _ => {
+      navDetail.removeAttribute('open');
+    });
+  })
 {% endjavascript %}
 
 <script type="application/ld+json">
