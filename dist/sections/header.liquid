@@ -568,44 +568,45 @@
   <hr id="nav-split" />
 {%- if section.settings.menu != blank -%}
   {%- if section.settings.menu_type_desktop == 'dropdown' -%}
-      <nav class="header__inline-menu page-width small-hide flex justify-content-between flex-wrap">
-        <ul class="list-menu list-menu--inline" role="list">
-          {%- for link in section.settings.menu.links -%}
-            <li>
-              {%- if link.links != blank -%}
-                <header-menu>
-                  <details id="Details-HeaderMenu-{{ forloop.index }}">
-                    <summary class="header__menu-item list-menu__item link focus-inset {%- if link.child_active %} header__active-menu-item--oneway {% endif %}" {%- if forloop.index == 1%} style="padding-left: 0" {% endif %}>
-                      <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase }}</span>
-                      {% render 'icon-caret' %}
-                    </summary>
-                    <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
-                      {%- for childlink in link.links -%}
-                        <li>
-                          <a href="{{ childlink.url }}" class="header__menu-item header__submenu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                            {{ childlink.title | escape | upcase }}
-                          </a>
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  </details>
-                </header-menu>
-              {%- else -%}
-                <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                  <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase  }}</span>
-                </a>
-              {%- endif -%}
-            </li>
-          {%- endfor -%}
-        </ul>
+    <nav class="header__inline-menu nav-page-width small-hide flex justify-content-between flex-wrap">
+      <ul class="list-menu list-menu--inline" role="list">
+        {%- for link in section.settings.menu.links -%}
+          <li>
+            {%- if link.links != blank -%}
+              <header-menu>
+                <details id="Details-HeaderMenu-{{ forloop.index }}">
+                  <summary class="header__menu-item list-menu__item link focus-inset {%- if link.child_active %} header__active-menu-item--oneway {% endif %}" {%- if forloop.index == 1%} style="padding-left: 0" {% endif %}>
+                    <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase }}</span>
+                    {% render 'icon-caret' %}
+                  </summary>
+                  <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
+                    {%- for childlink in link.links -%}
+                      <li>
+                        <a href="{{ childlink.url }}" class="header__menu-item header__submenu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                          {{ childlink.title | escape | upcase }}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </details>
+              </header-menu>
+            {%- else -%}
+              <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase  }}</span>
+              </a>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+
       <div class="list-menu flex align-items-center" id="contact-menu" style="position: relative;">
         <i style="position: absolute; top: 50%; transform: translateY(calc(-50% + 1px));" class="fa fa-lg fa-id-card"></i>
         <h3 style="padding-left: 32px;">Contact Us</h3>
-        <ul class="contact-submenu" style="min-width: 30rem;">
+        <ul class="contact-submenu" style="min-width: 25rem;">
           <li>
             <a class="nostyle" href="tel:(555) 555-5555">
               <i class="fa fa-lg fa-phone"></i>
-              <span>Call Us Now: (555) 555-5555</span>
+              <span>(555) 555-5555</span>
             </a>
           </li>
           <li>

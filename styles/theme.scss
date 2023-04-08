@@ -34,7 +34,7 @@ a.nostyle:hover {
     i {
         position: absolute;
         top: 50%;
-        transform: translateY(calc(-50% + 1px));
+        transform: translateY(-50%);
     }
 
     .contact-submenu {
@@ -73,12 +73,6 @@ a.nostyle:hover {
 
     &:hover .contact-submenu {
         display: block;
-    }
-}
-
-@media (max-width: 880px) {
-    #contact-menu {
-        display: none;
     }
 }
 
