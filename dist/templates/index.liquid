@@ -1,3 +1,10 @@
+<style>
+  section#contact > div {
+    background-image: url("{{ 'denim.webp' | asset_url }}");
+    background-repeat: repeat;
+  }
+</style>
+
 <div class="tim-base-container">
   <div class="row-fluid px-0 grid-gap-0 res-hero-homepage">
     <div class="col-md-6 start-md-2 hero-half">
@@ -11,7 +18,7 @@
 
         <a
           style="width: fit-content;"
-          class="btn btn-lg btn-round btn-sea p-800 text-uppercase"
+          class="btn btn-lg btn-round btn-primary-lightest p-800 text-uppercase"
           href="/collections/shop-all"
           >Shop Now</a
         >
@@ -37,7 +44,7 @@
     {% endfor %}
   </section>
 
-  <section class="bg-gray5" style="margin-top: -3rem">
+  <section class="bg-primary-base" style="margin-top: -3rem">
     <logo-slider>
       <div>
         <img src="http://place-hold.it/75x75">
@@ -82,7 +89,7 @@
       style="width: 100%;"
       data-flickity='{"wrapAround": true, "watchCSS": true, "autoHeight": true}'
     >
-      {%- assign collection = collections.pokemon -%}
+      {%- assign collection = collections['italian-renaissance'] -%}
 
       {% for product in collection.products limit: 8 %}
         <div class="flex flex-column border-solid-gray4-md p-200 justify-content-between carousel-cell">
@@ -148,7 +155,7 @@
     </div>
   </section>
 
-  <section class="mb-300 mt-750 page-width">
+  <section class="mb-300 mt-750 page-width" id="contact">
     <h1 class="font-48 line-height-100">Find Us In Person</h1>
     <hr class="heading-line mt-50">
     <div class="flex flex-column flex-row-lg justify-content-between align-items-stretch border-solid-gray4 p-150 p-xl-400 p-xxl-600">
@@ -164,14 +171,14 @@
         ></iframe>
       </div>
       <div>
-        <h1 class="font-sm-48">Contact</h1>
+        <h2 class="font-sm-48">Contact</h2>
         <hr class="heading-line-sm mt-50">
         <ul style="list-style: none; padding-left: 0;" class="mb-300">
           <li>Phone: <a href="tel:(555) 555-5555" class="link link--text">(555) 555-5555</a></li>
           <li>Email: <a href="mailto:test@gmail.com" class="link link--text">test@gmail.com</a></li>
         </ul>
 
-        <h1 class="font-sm-48">Location & Hours</h1>
+        <h2 class="font-sm-48">Location & Hours</h2>
         <hr class="heading-line-sm mt-50">
         <ul style="list-style: none; padding-left: 0;">
           <li>Hours: 8AM-5PM M-F</li>

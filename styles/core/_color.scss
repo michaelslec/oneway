@@ -52,7 +52,36 @@ $grays: (
     "gray9": #444,
 );
 
-$colors: map-collect($shopifyColors, $primaryColors, $primaryVariants, $secondaryColors, $grays);
+// Classic color palette
+$colorPaletteClassic: (
+    "primary-lightest": #4C4F63,
+    "primary-light": #373A47,
+    "primary-base": #1C1E27,
+    "primary-dark": #0F1019,
+    "primary-darkest": #04050A,
+    "secondary-lightest": #FFE0B2,
+    "secondary-light": #FFB84D,
+    "secondary-base": #FFAA00,
+    "secondary-dark": #C77F00,
+    "secondary-darkest": #8F5900,
+    "accent-lightest": #FFE8B3,
+    "accent-light": #FFCE54,
+    "accent-base": #F5A623,
+    "accent-dark": #BC7F1A,
+    "accent-darkest": #835C11,
+    "background-lightest": #FFFFFF,
+    "background-light": #F5F5F5,
+    "background-base": #E5E5E5,
+    "background-dark": #D5D5D5,
+    "background-darkest": #C5C5C5,
+    "text-lightest": #999999,
+    "text-light": #666666,
+    "text-base": #333333,
+    "text-dark": #1A1A1A,
+    "text-darkest": #000000,
+);
+
+$colors: map-collect($colorPaletteClassic, $shopifyColors, $primaryColors, $primaryVariants, $secondaryColors, $grays);
 
 // .bg-sea, .color-sea, etc
 @each $name,

@@ -98,13 +98,21 @@ a.nostyle:hover {
         }
     }
 
+    section#contact {
+        color: color("background-lightest");
+
+        h2 {
+            color: color("background-lightest");
+        }
+    }
+
     hr.heading-line {
         border: none;
         height: 0.1rem;
-        background-color: rgba(var(--color-foreground), 0.4);
         display: block;
         width: 72px;
         margin-bottom: 2.4rem;
+        background-color: color("secondary-dark");
 
         &-sm {
             @extend .heading-line;

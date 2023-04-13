@@ -58,8 +58,10 @@
 
 // .btn-sea, .btn-outline-sea, etc
 
+$colors: map-collect($colorPaletteClassic, $primaryColors);
+
 @each $name,
-$color in $primaryColors {
+$color in $colors {
     .btn-#{$name} {
         color: #fff;
         background-color: $color;

@@ -3,7 +3,7 @@
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);
-  --color-background: var(--color-base-background-1);
+  --color-background: 245, 245, 245;
   --gradient-background: var(--gradient-base-background-1);
 }
 
@@ -2490,7 +2490,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header__icon {
-  color: rgb(var(--color-foreground));
+  color: #F5F5F5;
 }
 
 .header__icon span {
@@ -2893,7 +2893,6 @@ details-disclosure > details {
 .header__inline-menu {
   display: block;
   background-color: rgb(var(--color-background));
-  background-color: #FEFEFE;
 }
 
 @media screen and (min-width: 750px) {
@@ -2925,8 +2924,6 @@ details-disclosure > details {
 
 .gradient {
   background: rgb(var(--color-background));
-  background: var(--gradient-background);
-  background-color: #FEFEFE;
   background-attachment: fixed;
 }
 
