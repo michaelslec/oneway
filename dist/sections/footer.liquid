@@ -110,8 +110,7 @@
                           | divided_by: settings.brand_image.aspect_ratio
                         -%}
                         <div
-                          class="footer-block__image-wrapper global-media-settings"
-                          style="max-width: min(100%, {{ settings.brand_image_width }}px);"
+                          class="flex flex-row align-items-center footer-block__image-wrapper global-media-settings"
                         >
                           {{
                             settings.brand_image
@@ -122,13 +121,18 @@
                               height: brand_image_height,
                               width: settings.brand_image_width
                           }}
+                          {%- if settings.brand_headline != blank -%}
+                            <h2
+                              style="font-size: 24px; padding-left: 16px; padding-right: 24px;"
+                              class="footer-block__heading rte"
+                            >
+                              {{ settings.brand_headline }}
+                            </h2>
+                          {%- endif -%}
                         </div>
-                      {%- endif -%}
-                      {%- if settings.brand_headline != blank -%}
-                        <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
-                      {%- endif -%}
-                      {%- if settings.brand_description != blank -%}
-                        <div class="rte">{{ settings.brand_description }}</div>
+                        {%- if settings.brand_description != blank -%}
+                          <div class="rte" style="padding-left: 8px;">{{ settings.brand_description }}</div>
+                        {%- endif -%}
                       {%- endif -%}
                       {%- if block.settings.show_social and has_social_icons -%}
                         {%- render 'social-icons' -%}
