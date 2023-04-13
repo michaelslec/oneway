@@ -41,8 +41,7 @@
 }
 
 .footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
-  padding-top: 3rem;
+  border-top: solid 0.1rem #4C4F63;
 }
 
 .footer__content-bottom:only-child {
@@ -339,7 +338,7 @@
 
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
-  color: rgba(var(--color-foreground), 0.75);
+  color: #F5F5F5;
 }
 
 .footer-block__details-content .list-menu__item--active {
