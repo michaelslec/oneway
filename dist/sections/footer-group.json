@@ -15,14 +15,14 @@
           "type": "link_list",
           "settings": {
             "heading": "Quick links",
-            "menu": "footer"
+            "menu": "quick-links"
           }
         },
         "5a11368b-a20d-4c84-b876-21035e52cbc3": {
           "type": "text",
           "settings": {
-            "heading": "Contact",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "Contact Us",
+            "subtext": "<p>test@gmail.com</p><p>(555) 555-5555</p><br/><p></p><p>8AM-5PM Monday-Friday</p><p>931 Address St, Awesomeville, TX, 77703</p>"
           }
         }
       },
@@ -47,7 +47,5 @@
       }
     }
   },
-  "order": [
-    "footer"
-  ]
+  "order": ["footer"]
 }
