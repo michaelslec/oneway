@@ -1,2 +1,2 @@
-- [ ] What am I going to do about product page
-- [ ] fix contact info
+ - social media links
+ - Hero image
