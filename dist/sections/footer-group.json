@@ -22,7 +22,7 @@
           "type": "text",
           "settings": {
             "heading": "Contact Us",
-            "subtext": "<p>test@gmail.com</p><p>(555) 555-5555</p><p></p><p>8AM-5PM Monday-Friday</p><p>931 Address St, Awesomeville, TX, 77703</p>"
+            "subtext": "<p><a href=\"mailto:onewaydieselperformance@aol.com\" target=\"_blank\" title=\"mailto:onewaydieselperformance@aol.com\">onewaydieselperformance@aol.com<\/a><\/p><p><a href=\"tel:(936) 645-4664\" target=\"_blank\" title=\"tel:(936) 645-4664\">(936) 645-4664<\/a><\/p><p><\/p><p>9AM-5PM Monday-Friday<\/p><p><a href=\"https:\/\/www.google.com\/maps\/place\/One+Way+Diesel+Performance,+13727+US-59,+Nacogdoches,+TX+75965\/@31.7197276,-94.6229987,17z\/data=!4m14!1m7!3m6!1s0x86378e2241e8bca5:0xb6682105fc8939ae!2s13727+US-59,+Nacogdoches,+TX+75965!8m2!3d31.7197381!4d-94.6230408!16s%2Fg%2F11j26qnkkr!3m5!1s0x86378e22419322bf:0x1626fd7cc031ebc4!8m2!3d31.7197276!4d-94.6229987!16s%2Fg%2F11fll6gfy8\" target=\"_blank\" title=\"Google Maps\">13727 US-59, Nacogdoches, TX 75965<\/a><\/p>"
           }
         }
       },
@@ -47,5 +47,7 @@
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }

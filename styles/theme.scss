@@ -12,6 +12,17 @@ a.nostyle:hover {
     cursor: pointer;
 }
 
+.footer {
+    .rte a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .rte a:hover {
+        text-decoration-line: underline;
+    }
+}
+
 #contact-menu {
 
     h3,
