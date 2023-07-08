@@ -1,3 +1,0 @@
- - social media links
- - Hero image
- - 
