@@ -89,7 +89,7 @@
       style="width: 100%;"
       data-flickity='{"wrapAround": true, "watchCSS": true, "autoHeight": true}'
     >
-      {%- assign collection = collections['featured'] -%}
+      {%- assign collection = collections['recommended'] -%}
 
       {% for product in collection.products limit: 8 %}
         <div class="flex flex-column border-solid-gray4-md p-200 justify-content-between carousel-cell">
